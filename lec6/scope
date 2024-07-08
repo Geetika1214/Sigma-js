@@ -1,0 +1,44 @@
+//Scope determines the accesibility of variables , ojects, and functions form different parts of the code
+//function(more specific)
+//block  (let, const) var is diff
+//lexical (nested functions)
+//global
+
+function calsum(a , b){
+ let sum = a+b;
+ console.log(sum);
+}
+calsum(2, 4);
+//console.log(sum);
+
+
+//Hoisting   (function used before def variables)
+function outerfun(){
+    function innerfunc(){
+        console.log(x);
+        console.log(y);
+    }
+    let x = 5;
+    let y = 6;
+    innerfunc();
+}
+
+outerfun();
+
+
+//pq
+
+let greet= "hello";
+
+function chanegegreet(){
+    let greet = "namaste";
+    console.log(greet, "outer");
+
+    function innergreet(){
+        console.log(greet , "inner");
+    }
+    innergreet();
+}
+
+console.log(greet);
+chanegegreet();
